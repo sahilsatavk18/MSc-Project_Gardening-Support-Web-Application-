@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+<style>
+  body{
+    background-color: rgb(229, 255, 255);
+  }
+  #searchbar{
+     margin-left: 15%;
+     padding:15px;
+     border-radius: 10px;
+   }
+ 
+   #searchbar {
+      width: 70%;
+      -webkit-transition: width 0.15s ease-in-out;
+      transition: width 0.15s ease-in-out;
+   }
+ 
+   /* When the input field gets focus,
+        change its width to 100% */
+   /*input[type=text]:focus {
+     width: 70%;
+   }*/
+   .gallery{
+   display:block;    
+  } 
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, rgba(2,0,36,1) 0%, rgba(184,243,9,0.09126978428089982) 33%, rgba(0,212,255,1) 100%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+  <div class="topnav" id="myTopnav">
+    <a href="homepage.html">Home</a>
+    <a href="http://localhost/Gardening%20Support%20Web%20App/register.php">Signup</a>
+    <a href="http://localhost/Gardening%20Support%20Web%20App/logina.php">Login</a>
+    <a href="http://localhost/Gardening%20Support%20Web%20App/Garden XYZ_Trial.php">Garden Planner</a>
+    <a href="http://localhost/Gardening%20Support%20Web%20App/landing.php">My Gardens</a>
+    <a href="Videos.html">Videos</a>
+    <a href="Plants.html">Plants</a>
+    <a href="Pests.html" class="active">Pests</a>
+    <a href="Beneficial Insects.html">Beneficial Insects</a>
+    <a href="Plant Diseases.html">Plant Diseases</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div><br>
+  <div id="id01" class="modal">
+  
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      </div>
+  
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+          
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+  
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+  <input id="searchbar" onkeyup="search_plant()" type="text"
+  name="search" placeholder="Search pests.."><br><br>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="plantsinfo/Aphid black bean.html">
+      <img src="images/Aphid, Black Bean.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">Aphid, Black Bean</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="plantsinfo/Aphid cabbage.html">
+      <img src="images/Aphid, Cabbage.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Aphid, Cabbage</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="plantsinfo/Aphid general.html">
+      <img src="images/Aphids (General).jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Aphids (General)</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="plantsinfo/Apple maggot.html">
+      <img src="images/Apple Maggot.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Apple Maggot</div>
+  </div>
+</div>
+<div class="responsive">
+    <div class="gallery">
+      <a href="plantsinfo/Armyworms.html">
+        <img src="images/Armyworms.jpg" alt="Cinque Terre" width="600" height="400">
+      </a>
+      <div class="desc">Armyworms</div>
+    </div>
+  </div>
+  
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a href="plantsinfo/Asiatic garden beetle.html">
+        <img src="images/Asiatic garden beetle.jpg" alt="Forest" width="600" height="400">
+      </a>
+      <div class="desc">Asiatic garden beetle</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a href="plantsinfo/Asparagus beetle.html">
+        <img src="images/Asparagus beetle.jpg" alt="Northern Lights" width="600" height="400">
+      </a>
+      <div class="desc">Asparagus beetle</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a href="plantsinfo/Box tree Moth.html">
+        <img src="images/Box tree moth.jpg" alt="Mountains" width="600" height="400">
+      </a>
+      <div class="desc">Box tree moth</div>
+    </div>
+  </div> 
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  
+</div>
+<script src="./scripts.js"></script>
+</body>
+</html>
+
+

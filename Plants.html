@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+<style>
+  body{
+    background-color: rgb(229, 255, 255);
+  }
+  #searchbar{
+     margin-left: 15%;
+     padding:15px;
+     border-radius: 10px;
+   }
+ 
+   #searchbar {
+      width: 70%;
+      -webkit-transition: width 0.15s ease-in-out;
+      transition: width 0.15s ease-in-out;
+   }
+ 
+   /* When the input field gets focus,
+        change its width to 100% */
+   /*input[type=text]:focus {
+     width: 70%;
+   }*/
+   .gallery{
+   display:block;    
+  } 
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="homepage.html">Home</a>
+    <a href="http://localhost/Gardening%20Support%20Web%20App/register.php">Signup</a>
+    <a href="http://localhost/Gardening%20Support%20Web%20App/logina.php">Login</a>
+    <a href="http://localhost/Gardening%20Support%20Web%20App/Garden XYZ_Trial.php">Garden Planner</a>
+    <a href="http://localhost/Gardening%20Support%20Web%20App/landing.php">My Gardens</a>
+    <a href="Videos.html">Videos</a>
+    <a href="Plants.html" class="active">Plants</a>
+    <a href="Pests.html">Pests</a>
+    <a href="Beneficial Insects.html">Beneficial Insects</a>
+    <a href="Plant Diseases.html">Plant Diseases</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div><br>
+  <div id="id01" class="modal">
+  
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      </div>
+  
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+          
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+  
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+  <input id="searchbar" onkeyup="search_plant()" type="text"
+  name="search" placeholder="Search plants.."><br><br>
+<!--img_5terre.jpg-->
+<div class="responsive">
+  <div class="gallery">
+    <a href="plantsinfo/acacia.html">
+      <img src="images/acacia.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">Acacia</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="plantsinfo/africandaisy.html">
+      <img src="images/africandaisy.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">African Daisy</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="plantsinfo/agapanthus.html">
+      <img src="images/agapanthus.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Agapanthus</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="plantsinfo/agastache.html">
+      <img src="images/agastache.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Agastache</div>
+  </div>
+</div>
+<div class="responsive">
+    <div class="gallery">
+      <a href="plantsinfo/ageratum.html">
+        <img src="images/ageratum.jpg" alt="Cinque Terre" width="600" height="400">
+      </a>
+      <div class="desc">Ageratum</div>
+    </div>
+  </div>
+  
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a href="plantsinfo/allium.html">
+        <img src="images/allium.jpg" alt="Forest" width="600" height="400">
+      </a>
+      <div class="desc">Allium</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a href="plantsinfo/almond.html">
+        <img src="images/almond.jpg" alt="Northern Lights" width="600" height="400">
+      </a>
+      <div class="desc">Almond</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a href="plantsinfo/Alstroemeria.html">
+        <img src="images/alstroemeria.jpg" alt="Mountains" width="600" height="400">
+      </a>
+      <div class="desc">Alstroemeria</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a href="plantsinfo/alyssum.html">
+        <img src="images/alyssum.jpg" alt="Cinque Terre" width="600" height="400">
+      </a>
+      <div class="desc">Alyssum</div>
+    </div>
+  </div>
+  
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a href="plantsinfo/amaranth.html">
+        <img src="images/amaranth.jpg" alt="Forest" width="600" height="400">
+      </a>
+      <div class="desc">Amaranth (Grain)</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a href="plantsinfo/amaranth2.html">
+        <img src="images/amaranth2.jpg" alt="Northern Lights" width="600" height="400">
+      </a>
+      <div class="desc">Amaranth (Ornamental)</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a href="plantsinfo/anemone.html">
+        <img src="images/anemone.jpg" alt="Mountains" width="600" height="400">
+      </a>
+      <div class="desc">Anemone</div>
+    </div>
+  </div>
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  
+</div>
+<script src="./scripts.js"></script>
+</body>
+</html>
+
+
